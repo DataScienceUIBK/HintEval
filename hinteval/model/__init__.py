@@ -1,0 +1,1 @@
+from hinteval.cores.model.model import AnswerAware, AnswerAgnostic
