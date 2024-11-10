@@ -58,7 +58,7 @@ Here we’re using five metrics, but what do they represent?
 4. **Familiarity (_Wikipedia_)**: Evaluates the familiarity of the information in the hints, questions, and answers based on Wikipedia view counts.
 5. **AnswerLeakage (_ContextualEmbeddings_)**: Measures how much the hints reveal the answers by calculating the similarity between the hints and answers using contextual embeddings.
 
-To explore other metrics, check the [metrics guide]((core-concepts-metric).
+To explore other metrics, check the [metrics guide](core-concepts-metric).
 
 ## Evaluation
 
