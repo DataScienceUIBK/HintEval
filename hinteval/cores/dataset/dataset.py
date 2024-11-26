@@ -718,6 +718,6 @@ class Dataset:
 
         name = name.lower()
         _path = os.path.join(os.environ['HINTEVAL_CACHE_DIR'], 'datasets', f'{name}.pickle')
-        if not os.path.exists(_path):
+        if not os.path.exists(_path) or force_download:
             DatasetDownloader.download(name, force_download)
         return cls.load(_path)
