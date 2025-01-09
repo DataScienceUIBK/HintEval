@@ -27,7 +27,7 @@ dependencies = ['numpy==1.26.4',
                 'sentence-transformers==3.0.1',
                 'accelerate==0.32.1'
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 authors = [{ name = "Jamshid Mozafari", email = "mozafari.jamshid@gmail.com" }]
 description = "A Python framework designed for both generating and evaluating hints."
 license = { file = "LICENSE" }
