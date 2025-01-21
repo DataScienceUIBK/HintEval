@@ -61,6 +61,171 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 
 ## 🏃 Quickstart
 
+### Generate a Synthetic Hint Dataset
+
+This tutorial provides step-by-step guidance on how to generate a synthetic hint dataset using large language models via the TogetherAI platform. To proceed, ensure you have an active API key for TogetherAI.
+
+```python
+api_key = "your-api-key"
+base_url = "https://api.together.xyz/v1"
+```
+
+#### Question/Answer Pairs
+
+First, gather a collection of question/answer pairs as the foundation for generating Question/Answer/Hint triples. For example, load 10 questions from the WebQuestions dataset using the 🤗datasets library:
+
+```python
+from datasets import load_dataset
+
+webq = load_dataset("Stanford/web_questions", split='test')
+question_answers = webq.select_columns(['question', 'answers'])[10:20]
+qa_pairs = zip(question_answers['question'], question_answers['answers'])
+```
+
+At this point, you have a set of question/answer pairs ready for creating synthetic Question/Answer/Hint instances.
+
+#### Dataset Creation
+
+Use HintEval's `Dataset` class to create a new dataset called `synthetic_hint_dataset`, which includes the 10 question/answer pairs within a subset named `entire`.
+
+```python
+from hinteval import Dataset
+from hinteval.cores import Subset, Instance
+
+dataset = Dataset('synthetic_hint_dataset')
+subset = Subset('entire')
+
+for q_id, (question, answers) in enumerate(qa_pairs, 1):
+    instance = Instance.from_strings(question, answers, [])
+    subset.add_instance(instance, f'id_{q_id}')
+
+dataset.add_subset(subset)
+dataset.prepare_dataset(fill_question_types=True)
+```
+
+#### Hint Generation
+
+Generate 5 hints for each question using HintEval’s `AnswerAware` model. For this example, we will use the Meta LLaMA-3.1-70b-Instruct-Turbo model from TogetherAI.
+
+```python
+from hinteval.model import AnswerAware
+
+generator = AnswerAware(
+    'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', 
+    api_key, base_url, num_of_hints=5, enable_tqdm=True
+)
+generator.generate(dataset['entire'].get_instances())
+```
+
+> **Note**: Depending on the LLM provider, you may need to configure the model and other parameters in the `AnswerAware` function. See the [documentation](http://hinteval.readthedocs.io/) for more information.
+
+#### Exporting the Dataset
+
+Once the hints are generated, export the synthetic hint dataset to a pickle file:
+
+```python
+dataset.store('./synthetic_hint_dataset.pickle')
+```
+
+#### Viewing the Hints
+
+Finally, view the hints generated for the third question in the dataset:
+
+```python
+dataset = Dataset.load('./synthetic_hint_dataset.pickle')
+
+third_question = dataset['entire'].get_instance('id_3')
+print(f'Question: {third_question.question.question}')
+print(f'Answer: {third_question.answers[0].answer}')
+print()
+for idx, hint in enumerate(third_question.hints, 1):
+    print(f'Hint {idx}: {hint.hint}')
+```
+
+Example output:
+
+```
+Question: who is governor of ohio 2011?
+Answer: John Kasich
+
+Hint 1: The answer is a Republican politician who served as the 69th governor of the state.
+Hint 2: This person was a member of the U.S. House of Representatives for 18 years before becoming governor.
+Hint 3: The governor was known for his conservative views and efforts to reduce government spending.
+Hint 4: During their term, they implemented several reforms related to education, healthcare, and the economy.
+Hint 5: This governor served two consecutive terms, from 2011 to 2019, and ran for the U.S. presidency in 2016.
+```
+
+---
+
+### Evaluating Your Hint Dataset
+
+Once your hint dataset is ready, it’s time to evaluate the hints. This section guides you through the evaluation process.
+
+```python
+api_key = "your-api-key"
+base_url = "https://api.together.xyz/v1"
+```
+
+#### Load the Data
+
+For this tutorial, use the synthetic dataset generated earlier. Alternatively, you can load a preprocessed dataset using the `Dataset.download_and_load_dataset()` function.
+
+```python
+from hinteval import Dataset
+
+dataset = Dataset.load('./synthetic_hint_dataset.pickle')
+```
+
+#### Metrics
+
+HintEval provides several metrics to evaluate different aspects of the hints:
+
+- **Relevance**: Measures how relevant the hints are to the question.
+- **Readability**: Assesses the readability of the hints.
+- **Convergence**: Evaluates how effectively hints narrow down potential answers.
+- **Familiarity**: Rates how common or well-known the hints' information is.
+- **Answer Leakage**: Detects how much the hints reveal the correct answers.
+
+Here’s how to import the metrics:
+
+```python
+from hinteval.evaluation.relevance import Rouge
+from hinteval.evaluation.readability import MachineLearningBased
+from hinteval.evaluation.convergence import LlmBased
+from hinteval.evaluation.familiarity import Wikipedia
+from hinteval.evaluation.answer_leakage import ContextualEmbeddings
+```
+
+#### Evaluate the Dataset
+
+Extract the question, hints, and answers from the dataset and evaluate using different metrics:
+
+```python
+instances = dataset['entire'].get_instances()
+questions = [instance.question for instance in instances]
+answers = []
+[answers.extend(instance.answers) for instance in instances]
+hints = []
+[hints.extend(instance.hints) for instance in instances]
+
+# Example evaluations
+Rouge('rougeL', enable_tqdm=True).evaluate(instances)
+MachineLearningBased('random_forest', enable_tqdm=True).evaluate(questions + hints)
+LlmBased('llama-3-70b', together_ai_api_key=api_key, enable_tqdm=True).evaluate(instances)
+Wikipedia(enable_tqdm=True).evaluate(questions + hints + answers)
+ContextualEmbeddings(enable_tqdm=True).evaluate(instances)
+```
+
+#### Exporting the Results
+
+Export the evaluated dataset to a JSON file for further analysis:
+
+```python
+dataset.store_json('./evaluated_synthetic_hint_dataset.json')
+```
+
+> **Note**: Evaluated scores and metrics are automatically stored in the dataset. Saving the dataset includes the scores.
+
 Refer to our [documentation](http://hinteval.readthedocs.io/) to learn more.
 
 ## ⚙️ Components
