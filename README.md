@@ -251,12 +251,12 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
 
 <p align="center">
-<img src="./docs/source/_static/imgs/evaluators.png">
+<img src="./docs/source/_static/imgs/evaluators.png" width="50%">
 </p>
 
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
- - Supports custom models and local inference setups​.
+ - Supports custom models and local inference setups.
 
 ## 🤝Contributors
 
