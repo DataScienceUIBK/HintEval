@@ -21,7 +21,7 @@
  - **Comprehensive Metrics**: Implements *five* core metrics (*fifteen* evaluation methods)—*Relevance*, *Readability*, *Convergence*, *Familiarity*, and *Answer Leakage*—with lightweight to resource-intensive methods to cater to diverse research needs.
  - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including [*TriviaHG*](https://github.com/DataScienceUIBK/TriviaHG), [*WikiHint*](https://github.com/DataScienceUIBK/WikiHint), [*HintQA*](https://github.com/DataScienceUIBK/HintQA), and [*KG-Hint*](https://github.com/AlexWalcher/automaticHintGeneration), supporting both *answer-aware* and *answer-agnostic* hint generation approaches.
  - **Customizability**: Allows users to define their own datasets, models, and evaluation methods with minimal effort using a structured design based on Python classes.
- - **Extensive Documentation**: Accompanied by detailed [online documentation](https://hinteval.readthedocs.io/) and tutorials for easy adoption.
+ - **Extensive Documentation**: Accompanied by detailed [📖online documentation](https://hinteval.readthedocs.io/) and tutorials for easy adoption.
 
 ## 🔎 Roadmap
  - **Enhanced Datasets**: Expand the repository with additional datasets to support diverse hint-related tasks.
@@ -117,7 +117,7 @@ generator = AnswerAware(
 generator.generate(dataset['entire'].get_instances())
 ```
 
-> **Note**: Depending on the LLM provider, you may need to configure the model and other parameters in the `AnswerAware` function. See the [documentation](http://hinteval.readthedocs.io/) for more information.
+> **Note**: Depending on the LLM provider, you may need to configure the model and other parameters in the `AnswerAware` function. See the [📖documentation](http://hinteval.readthedocs.io/) for more information.
 
 #### Exporting the Dataset
 
@@ -226,7 +226,7 @@ dataset.store_json('./evaluated_synthetic_hint_dataset.json')
 
 > **Note**: Evaluated scores and metrics are automatically stored in the dataset. Saving the dataset includes the scores.
 
-Refer to our [documentation](http://hinteval.readthedocs.io/) to learn more.
+Refer to our [📖documentation](http://hinteval.readthedocs.io/) to learn more.
 
 ## ⚙️ Components
 HintEval is modular and customizable, with core components designed to handle every stage of the hint generation and evaluation pipeline:
