@@ -234,44 +234,19 @@ HintEval is modular and customizable, with core components designed to handle ev
 ### 1. Dataset Management
  - **Preprocessed Datasets**: Includes widely used datasets like [TriviaHG](https://github.com/DataScienceUIBK/TriviaHG), [WikiHint](https://github.com/DataScienceUIBK/WikiHint), [HintQA](https://github.com/DataScienceUIBK/HintQA), and [KG-Hint](https://github.com/AlexWalcher/automaticHintGeneration).
  - **Dynamic Dataset Loading**: Use `Dataset.available_datasets()` to list, download, and load datasets effortlessly.
- - **Custom Dataset Creation**: Define datasets using the Dataset and Instance classes for tailored hint generation.
+ - **Custom Dataset Creation**: Define datasets using the `Dataset` and `Instance` classes for tailored hint generation.
 ### 2. Hint Generation Models
- - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs like Meta LLaMA-3.1.
+ - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs.
  - **Answer-Agnostic Models**: Generate hints without requiring specific answers for open-ended tasks.
 ### 3. Evaluation Metrics
- - **Relevance**: Measures how well hints relate to the question.
- - **Readability**: Assesses grammatical and syntactical quality.
- - **Convergence**: Evaluates how effectively hints lead users to correct answers.
- - **Familiarity**: Rates hints based on the commonness of knowledge.
- - **Answer Leakage**: Detects if hints reveal answers too directly.
+ - **Relevance**: Measures how relevant the hints are to the question.
+ - **Readability**: Assesses the readability of the hints.
+ - **Convergence**: Evaluates how effectively hints narrow down potential answers.
+ - **Familiarity**: Rates how common or well-known the hints' information is.
+ - **Answer Leakage**: Detects how much the hints reveal the correct answers.
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
- - Supports custom models and local inference setups​
-
-## 🤖 Supporting Methods
-HintEval includes built-in support for state-of-the-art methods and encourages user extensions:
-
-### Supported Methods
-1. **Answer-Aware Hint Generation**: Uses LLMs optimized for hint generation tasks, such as Meta LLaMA or GPT-series models.
-2. **Answer-Agnostic Hint Generation**: Generates hints without predefined answers, allowing for greater flexibility in ambiguous scenarios.
-3. **Evaluation Techniques**:
- - Rouge-L for relevance scoring.
- - Machine Learning-Based Models for readability assessments.
- - Contextual Embeddings to measure answer leakage.
-### Community Contributions
-HintEval allows researchers to add their own models, datasets, and metrics by extending base classes. It provides templates for building new components easily.
-
-## 📓 Supporting Datasets & Document Corpus
-HintEval supports a range of preprocessed datasets for hint generation and evaluation, alongside user-defined corpora:
-
-### Preprocessed Datasets
- - **TriviaHG**: Trivia-based question-answer-hint triples.
- - **WikiHint**: Wiki-derived hint datasets focused on general knowledge.
- - **HintQA**: Designed for evaluating question-answer-hint pipelines.
- - **KG-Hint**: Focused on knowledge graph-based hint creation.
-### Custom Dataset Support
- - Use the Dataset class to create, load, or export datasets.
- - Supports integration with popular libraries like 🤗datasets for additional flexibility.
+ - Supports custom models and local inference setups​.
 
 ## 🤝Contributors
 
