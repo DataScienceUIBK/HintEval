@@ -1,18 +1,10 @@
 <p align="center">
-  <img src="./docs/source/_static/imgs/hinteval-logo.png" width="200" />
-</p>
-
-<p align="center">
   <a href="http://hinteval.readthedocs.io/"><img src="https://img.shields.io/static/v1?label=Documentation&message=HintEval&color=orange&logo=Read the Docs"></a>
   <a href="https://opensource.org/license/apache-2-0"><img src="https://img.shields.io/static/v1?label=License&message=Apache-2.0&color=success"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
 </p>
 
 **HintEval** is a powerful framework designed for both generating and evaluating hints. These hints serve as subtle clues, guiding users toward the correct answer without directly revealing it. As the first tool of its kind, HintEval allows users to create and assess hints from various perspectives. 
-
-<p align="center">
-<img src="./docs/source/_static/imgs/Framework.png">
-</p>
 
 ## ✨ Features
  - **Unified Framework**: HintEval combines datasets, models, and evaluation metrics into a single Python-based library. This integration allows researchers to seamlessly conduct hint generation and evaluation tasks.
@@ -234,10 +226,6 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Dynamic Dataset Loading**: Use `Dataset.available_datasets()` to list, download, and load datasets effortlessly.
  - **Custom Dataset Creation**: Define datasets using the `Dataset` and `Instance` classes for tailored hint generation.
 
-<p align="center">
-<img src="./docs/source/_static/imgs/dataset-diagram.png">
-</p>
-
 ### 2. Hint Generation Models
  - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs.
  - **Answer-Agnostic Models**: Generate hints without requiring specific answers for open-ended tasks.
@@ -247,10 +235,6 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Convergence**: Evaluates how effectively hints narrow down potential answers.
  - **Familiarity**: Rates how common or well-known the hints' information is.
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
-
-<p align="center">
-<img src="./docs/source/_static/imgs/evaluators.png" width="50%">
-</p>
 
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
