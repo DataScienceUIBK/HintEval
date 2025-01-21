@@ -235,6 +235,11 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Preprocessed Datasets**: Includes widely used datasets like [TriviaHG](https://github.com/DataScienceUIBK/TriviaHG), [WikiHint](https://github.com/DataScienceUIBK/WikiHint), [HintQA](https://github.com/DataScienceUIBK/HintQA), and [KG-Hint](https://github.com/AlexWalcher/automaticHintGeneration).
  - **Dynamic Dataset Loading**: Use `Dataset.available_datasets()` to list, download, and load datasets effortlessly.
  - **Custom Dataset Creation**: Define datasets using the `Dataset` and `Instance` classes for tailored hint generation.
+
+<p align="center">
+<img src="./docs/source/_static/imgs/dataset-diagram.png">
+</p>
+
 ### 2. Hint Generation Models
  - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs.
  - **Answer-Agnostic Models**: Generate hints without requiring specific answers for open-ended tasks.
@@ -244,6 +249,11 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Convergence**: Evaluates how effectively hints narrow down potential answers.
  - **Familiarity**: Rates how common or well-known the hints' information is.
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
+
+<p align="center">
+<img src="./docs/source/_static/imgs/evaluators.png">
+</p>
+
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
  - Supports custom models and local inference setups​.
