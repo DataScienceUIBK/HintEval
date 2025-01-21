@@ -18,8 +18,8 @@
 
 ## ✨ Features
  - **Unified Framework**: HintEval combines datasets, models, and evaluation metrics into a single Python-based library. This integration allows researchers to seamlessly conduct hint generation and evaluation tasks.
- - **Comprehensive Metrics**: Implements five core metrics—Relevance, Readability, Convergence, Familiarity, and Answer Leakage—with lightweight to resource-intensive methods to cater to diverse research needs.
- - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including TriviaHG, WikiHint, HintQA, and KG-Hint, supporting both answer-aware and answer-agnostic hint generation approaches.
+ - **Comprehensive Metrics**: Implements *five* core metrics (*fifteen* evaluation methods)—*Relevance*, *Readability*, *Convergence*, *Familiarity*, and *Answer Leakage*—with lightweight to resource-intensive methods to cater to diverse research needs.
+ - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including [*TriviaHG*](https://github.com/DataScienceUIBK/TriviaHG), [*WikiHint*](https://github.com/DataScienceUIBK/WikiHint), [*HintQA*](https://github.com/DataScienceUIBK/HintQA), and [*KG-Hint*](https://github.com/AlexWalcher/automaticHintGeneration), supporting both *answer-aware* and *answer-agnostic* hint generation approaches.
  - **Customizability**: Allows users to define their own datasets, models, and evaluation methods with minimal effort using a structured design based on Python classes.
  - **Extensive Documentation**: Accompanied by detailed online documentation and tutorials for easy adoption.
 
@@ -63,7 +63,7 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 
 ### Generate a Synthetic Hint Dataset
 
-This tutorial provides step-by-step guidance on how to generate a synthetic hint dataset using large language models via the TogetherAI platform. To proceed, ensure you have an active API key for TogetherAI.
+This tutorial provides step-by-step guidance on how to generate a synthetic hint dataset using large language models via the [TogetherAI platform](https://www.together.ai/). To proceed, ensure you have an active API key for TogetherAI.
 
 ```python
 api_key = "your-api-key"
@@ -232,8 +232,8 @@ Refer to our [documentation](http://hinteval.readthedocs.io/) to learn more.
 HintEval is modular and customizable, with core components designed to handle every stage of the hint generation and evaluation pipeline:
 
 ### 1. Dataset Management
- - **Preprocessed Datasets**: Includes widely used datasets like TriviaHG, WikiHint, and HintQA.
- - **Dynamic Dataset Loading**: Use Dataset.available_datasets() to list, download, and load datasets effortlessly.
+ - **Preprocessed Datasets**: Includes widely used datasets like [TriviaHG](https://github.com/DataScienceUIBK/TriviaHG), [WikiHint](https://github.com/DataScienceUIBK/WikiHint), [HintQA](https://github.com/DataScienceUIBK/HintQA), and [KG-Hint](https://github.com/AlexWalcher/automaticHintGeneration).
+ - **Dynamic Dataset Loading**: Use `Dataset.available_datasets()` to list, download, and load datasets effortlessly.
  - **Custom Dataset Creation**: Define datasets using the Dataset and Instance classes for tailored hint generation.
 ### 2. Hint Generation Models
  - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs like Meta LLaMA-3.1.
