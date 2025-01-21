@@ -59,7 +59,7 @@ For the latest features, you can install the most recent version from the main b
 pip install git+https://github.com/DataScienceUIBK/HintEval
 ```
 
-## 🏃 Quickstart
+## 🏃 Quick Start
 
 ### Generate a Synthetic Hint Dataset
 
