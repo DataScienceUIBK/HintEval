@@ -12,6 +12,22 @@
 
 **HintEval** is a powerful framework designed for both generating and evaluating hints. These hints serve as subtle clues, guiding users toward the correct answer without directly revealing it. As the first tool of its kind, HintEval allows users to create and assess hints from various perspectives. 
 
+<p align="center">
+<img src="./docs/source/_static/imgs/Framework.png">
+</p>
+
+## ✨ Features
+ - **Unified Framework**: HintEval combines datasets, models, and evaluation metrics into a single Python-based library. This integration allows researchers to seamlessly conduct hint generation and evaluation tasks.
+ - **Comprehensive Metrics**: Implements five core metrics—Relevance, Readability, Convergence, Familiarity, and Answer Leakage—with lightweight to resource-intensive methods to cater to diverse research needs.
+ - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including TriviaHG, WikiHint, HintQA, and KG-Hint, supporting both answer-aware and answer-agnostic hint generation approaches.
+ - **Customizability**: Allows users to define their own datasets, models, and evaluation methods with minimal effort using a structured design based on Python classes.
+ - **Extensive Documentation**: Accompanied by detailed online documentation and tutorials for easy adoption.
+
+## 🔎 Roadmap
+ - **Enhanced Datasets**: Expand the repository with additional datasets to support diverse hint-related tasks.
+ - **Advanced Evaluation Metrics**: Introduce new evaluation techniques such as Unieval and cross-lingual compatibility.
+ - **Broader Compatibility**: Ensure support for emerging language models and APIs.
+ - **Community Involvement**: Encourage contributions of new datasets, metrics, and use cases from the research community.
 ## 🖥️ Installation
 
 It's recommended to install HintEval in a [virtual environment](https://docs.python.org/3/library/venv.html) using [Python 3.11.9](https://www.python.org/downloads/release/python-3119/). If you're not familiar with Python virtual environments, check out this [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). Alternatively, you can create a new environment using [Conda](https://anaconda.org/anaconda/conda).
@@ -45,39 +61,52 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 
 ## 🏃 Quickstart
 
-This is a small example program you can run to see hinteval in action!
-
-```python
-from hinteval.cores import Instance, Question, Hint, Answer
-from hinteval.evaluation.convergence import LlmBased
-
-llm = LlmBased(model_name='llama-3-70b', together_ai_api_key='your_api_key', enable_tqdm=True)
-instance_1 = Instance(
-    question=Question('What is the capital of Austria?'),
-    answers=[Answer('Vienna')],
-    hints=[Hint('This city, once home to Mozart and Beethoven, is the capital of Austria.')])
-instance_2 = Instance(
-    question=Question('Who was the president of USA in 2009?'),
-    answers=[Answer('Barack Obama')],
-    hints=[Hint('He was the first African-American president in U. S. history.')])
-instances = [instance_1, instance_2]
-results = llm.evaluate(instances)
-print(results)
-# [[0.91], [1.0]]
-metrics = [f'{metric_key}: {metric_value.value}' for
-       instance in instances
-       for hint in instance.hints for metric_key, metric_value in
-       hint.metrics.items()]
-print(metrics)
-# ['convergence-llm-llama-3-70b: 0.91', 'convergence-llm-llama-3-70b: 1.0']
-scores = [hint.metrics['convergence-llm-llama-3-70b'].metadata['scores'] for inst in instances for hint in inst.hints]
-print(scores[0])
-# {'Salzburg': 1, 'Graz': 0, 'Innsbruck': 0, 'Linz': 0, 'Klagenfurt': 0, 'Bregenz': 0, 'Wels': 0, 'St. Pölten': 0, 'Eisenstadt': 0, 'Sankt Johann impong': 0, 'Vienna': 1}
-print(scores[1])
-# {'George W. Bush': 0, 'Bill Clinton': 0, 'Jimmy Carter': 0, 'Donald Trump': 0, 'Joe Biden': 0, 'Ronald Reagan': 0, 'Richard Nixon': 0, 'Gerald Ford': 0, 'Franklin D. Roosevelt': 0, 'Theodore Roosevelt': 0, 'Barack Obama': 1}
-```
-
 Refer to our [documentation](http://hinteval.readthedocs.io/) to learn more.
+
+## ⚙️ Components
+HintEval is modular and customizable, with core components designed to handle every stage of the hint generation and evaluation pipeline:
+
+### 1. Dataset Management
+ - **Preprocessed Datasets**: Includes widely used datasets like TriviaHG, WikiHint, and HintQA.
+ - **Dynamic Dataset Loading**: Use Dataset.available_datasets() to list, download, and load datasets effortlessly.
+ - **Custom Dataset Creation**: Define datasets using the Dataset and Instance classes for tailored hint generation.
+### 2. Hint Generation Models
+ - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs like Meta LLaMA-3.1.
+ - **Answer-Agnostic Models**: Generate hints without requiring specific answers for open-ended tasks.
+### 3. Evaluation Metrics
+ - **Relevance**: Measures how well hints relate to the question.
+ - **Readability**: Assesses grammatical and syntactical quality.
+ - **Convergence**: Evaluates how effectively hints lead users to correct answers.
+ - **Familiarity**: Rates hints based on the commonness of knowledge.
+ - **Answer Leakage**: Detects if hints reveal answers too directly.
+### 4. Model Integration
+ - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
+ - Supports custom models and local inference setups​
+
+## 🤖 Supporting Methods
+HintEval includes built-in support for state-of-the-art methods and encourages user extensions:
+
+### Supported Methods
+1. **Answer-Aware Hint Generation**: Uses LLMs optimized for hint generation tasks, such as Meta LLaMA or GPT-series models.
+2. **Answer-Agnostic Hint Generation**: Generates hints without predefined answers, allowing for greater flexibility in ambiguous scenarios.
+3. **Evaluation Techniques**:
+ - Rouge-L for relevance scoring.
+ - Machine Learning-Based Models for readability assessments.
+ - Contextual Embeddings to measure answer leakage.
+### Community Contributions
+HintEval allows researchers to add their own models, datasets, and metrics by extending base classes. It provides templates for building new components easily.
+
+## 📓 Supporting Datasets & Document Corpus
+HintEval supports a range of preprocessed datasets for hint generation and evaluation, alongside user-defined corpora:
+
+### Preprocessed Datasets
+ - **TriviaHG**: Trivia-based question-answer-hint triples.
+ - **WikiHint**: Wiki-derived hint datasets focused on general knowledge.
+ - **HintQA**: Designed for evaluating question-answer-hint pipelines.
+ - **KG-Hint**: Focused on knowledge graph-based hint creation.
+### Custom Dataset Support
+ - Use the Dataset class to create, load, or export datasets.
+ - Supports integration with popular libraries like 🤗datasets for additional flexibility.
 
 ## 🤝Contributors
 
