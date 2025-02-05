@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="http://hinteval.readthedocs.io/"><img src="https://img.shields.io/static/v1?label=Documentation&message=HintEval&color=orange&logo=Read the Docs"></a>
-  <a href=""><img src="https://img.shields.io/static/v1?label=Paper&message=ArXiv&color=green&logo=arXiv"></a>
+  <a href="https://doi.org/10.48550/arXiv.2502.00857"><img src="https://img.shields.io/static/v1?label=Paper&message=ArXiv&color=green&logo=arXiv"></a>
   <a href="https://opensource.org/license/apache-2-0"><img src="https://img.shields.io/static/v1?label=License&message=Apache-2.0&color=red"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
   <a href="https://github.com/DataScienceUIBK/HintEval/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/DataScienceUIBK/HintEval.svg?label=Version&color=orange"></a>
@@ -311,7 +311,7 @@ Thank you for helping make this project better!
 This project is licensed under the Apache-2.0 License - see the [LICENSE](https://opensource.org/license/apache-2-0) file for details.
 
 ## ✨Citation
-If you find this work useful, please cite [📜our paper]():
+If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2502.00857):
 ### Plain
 
 To be announced.
