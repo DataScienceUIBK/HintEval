@@ -314,11 +314,20 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE](https:
 If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2502.00857):
 ### Plain
 
-To be announced.
+Mozafari, J., Piryani, B., Abdallah, A., & Jatowt, A. (2025). HintEval: A Comprehensive Framework for Hint Generation and Evaluation for Questions. ArXiv. https://arxiv.org/abs/2502.00857
 
 ### Bibtex
 ```bibtex
-To be announced.
+@article{mozafari2025hintevalcomprehensiveframeworkhint,
+	title        = {HintEval: A Comprehensive Framework for Hint Generation and Evaluation for Questions},
+	author       = {Jamshid Mozafari and Bhawna Piryani and Abdelrahman Abdallah and Adam Jatowt},
+	year         = 2025,
+	doi          = {10.48550/arXiv.2502.00857},
+	url          = {https://arxiv.org/abs/2502.00857},
+	eprint       = {2502.00857},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.CL}
+}
 ```
 
 ## 🙏Acknowledgments
