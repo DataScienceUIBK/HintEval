@@ -10,7 +10,7 @@
   <a href="https://github.com/DataScienceUIBK/HintEval/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/DataScienceUIBK/HintEval.svg?label=Version&color=orange"></a>
 </p>
 
-**HintEval** is a powerful framework designed for both generating and evaluating hints for input questions. These hints serve as subtle clues, guiding users toward the correct answer without directly revealing it. As the first tool of its kind, HintEval allows users to create and assess hints from various perspectives. 
+**HintEval💡** is a powerful framework designed for both generating and evaluating hints for input questions. These hints serve as subtle clues, guiding users toward the correct answer without directly revealing it. As the first tool of its kind, HintEval allows users to create and assess hints from various perspectives. 
 
 <p align="center">
 <img src="./docs/source/_static/imgs/Framework.png">
