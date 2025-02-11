@@ -325,12 +325,7 @@ Mozafari, J., Piryani, B., Abdallah, A., & Jatowt, A. (2025). HintEval: A Compre
      keywords = {Computer Science - Computation and Language, Computer Science - Information Retrieval},
          year = 2025,
         month = feb,
-          eid = {arXiv:2502.00857},
-        pages = {arXiv:2502.00857},
-          doi = {10.48550/arXiv.2502.00857},
-archivePrefix = {arXiv},
-       eprint = {2502.00857},
- primaryClass = {cs.CL}
+          doi = {10.48550/arXiv.2502.00857}
 }
 ```
 
