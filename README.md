@@ -32,8 +32,8 @@
  - **Advanced Evaluation Metrics**: Introduce new evaluation techniques such as Unieval and cross-lingual compatibility.
  - **Broader Compatibility**: Ensure support for emerging language models and APIs.
  - **Community Involvement**: Encourage contributions of new datasets, metrics, and use cases from the research community.
-## 🖥️ Installation
 
+## 🖥️ Installation
 It's recommended to install HintEval in a [virtual environment](https://docs.python.org/3/library/venv.html) using [Python 3.11.9](https://www.python.org/downloads/release/python-3119/). If you're not familiar with Python virtual environments, check out this [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). Alternatively, you can create a new environment using [Conda](https://anaconda.org/anaconda/conda).
 
 ### Set up the virtual environment
@@ -64,6 +64,10 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 ```
 
 ## 🏃 Quick Start
+
+### 🚀 Run the HintEval in Google Colab
+
+You can easily try **HintEval** in your browser via **Google Colab**, with no local installation required. Simply **[launch the Colab notebook](https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/tests/demo.ipynb)** to explore **HintEval** interactively.
 
 ### Generate a Synthetic Hint Dataset
 
