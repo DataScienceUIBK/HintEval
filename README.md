@@ -3,9 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/JamshidJDMY/HintEval"><img src="https://img.shields.io/static/v1?label=Models&message=HuggingFace&color=yellow&logo=huggingface"></a>
   <a href="http://hinteval.readthedocs.io/"><img src="https://img.shields.io/static/v1?label=Documentation&message=HintEval&color=orange&logo=Read the Docs"></a>
   <a href="https://doi.org/10.48550/arXiv.2502.00857"><img src="https://img.shields.io/static/v1?label=Paper&message=ArXiv&color=green&logo=arXiv"></a>
+  <a href="https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/test/demo.ipynb"><img src="https://img.shields.io/static/v1?label=Colab&message=Demo&logo=Google%20Colab&color=f9ab00"></a>
+  <a href="https://huggingface.co/JamshidJDMY/HintEval"><img src="https://img.shields.io/static/v1?label=Models&message=HuggingFace&color=yellow&logo=huggingface"></a>
   <a href="https://opensource.org/license/apache-2-0"><img src="https://img.shields.io/static/v1?label=License&message=Apache-2.0&color=red"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
   <a href="https://github.com/DataScienceUIBK/HintEval/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/DataScienceUIBK/HintEval.svg?label=Version&color=orange"></a>
