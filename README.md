@@ -224,6 +224,23 @@ Wikipedia(enable_tqdm=True).evaluate(questions + hints + answers)
 ContextualEmbeddings(enable_tqdm=True).evaluate(instances)
 ```
 
+#### Viewing the Evaluation Metrics
+
+Finally, let's view the metrics evaluated for the second hint of the third question in the dataset.
+
+```python
+third_question = dataset['entire'].get_instance('id_3')
+second_hint = third_question.hints[1]
+
+print(f'Question: {third_question.question.question}')
+print(f'Answer: {third_question.answers[0].answer}')
+print(f'Second Hint: {second_hint.hint}')
+print()
+
+for metric in second_hint.metrics:
+    print(f'{metric}: {second_hint.metrics[metric].value}')
+```
+
 #### Exporting the Results
 
 Export the evaluated dataset to a JSON file for further analysis:
