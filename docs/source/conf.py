@@ -75,7 +75,7 @@ theme_options = ThemeOptions(
     logo_dark="./_static/imgs/hinteval-logo.png",
     extra_header_link_icons={
         "github": {
-            "link": "https://github.com/DataScienceUIBK/HintEval",
+            "link": "https://github.com/my-unknown-account/HintEval",
             "icon": (
                 '<svg height="26px" style="margin-top:-2px;display:inline" '
                 'viewBox="0 0 45 44" '
