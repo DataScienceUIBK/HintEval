@@ -27,7 +27,7 @@ pip install hinteval
 For the latest features, you can install the most recent version from the main branch:
 
 ```bash
-pip install git+https://github.com/DataScienceUIBK/HintEval
+pip install git+https://github.com/my-unknown-account/HintEval
 ```
 
 Now that HintEval is installed, you can create a [synthetic dataset](get-started-testset-generation) using your own questions and answers. If you already have a dataset, learn how to [evaluate it](get-started-evaluation) with HintEval.
