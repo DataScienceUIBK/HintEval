@@ -14,5 +14,5 @@ A well-known Persian proverb says:
 
 Get to know some of our amazing members who have made impactful contributions!
 
-- 🌏 [Jamshid Mozafari](https://www.jmozafari.com/)
-- 🌍 [Adam Jatowt](https://adammo12.github.io/adamjatowt/)
+<!-- - 🌏 [Jamshid Mozafari](https://www.jmozafari.com/) -->
+<!-- - 🌍 [Adam Jatowt](https://adammo12.github.io/adamjatowt/) -->
