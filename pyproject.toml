@@ -12,20 +12,21 @@ dependencies = ['numpy==1.26.4',
                 'outlines==1.2.3',
                 'pydantic==2.9.1',
                 'datasets==2.20.0',
-		'prettytable==3.11.0',
+				'prettytable==3.11.0',
                 'sentencepiece==0.2.0',
                 'torchtext==0.2.3',
                 'lftk==1.0.9',
                 'joblib==1.4.2',
                 'xgboost==2.1.0',
                 'openai==1.45.1',
-		'nest-asyncio==1.6.0',
+				'nest-asyncio==1.6.0',
                 'tok==0.1.14',
                 'rouge-score==0.1.2',
                 'Faker==26.0.0',
                 'zipfile-deflate64==0.2.0',
                 'sentence-transformers==3.0.1',
-                'accelerate==0.32.1'
+                'accelerate==0.32.1',
+				'httpx==0.27.2'
 ]
 requires-python = ">=3.10"
 authors = [{ name = "Jamshid Mozafari", email = "mozafari.jamshid@gmail.com" }]
