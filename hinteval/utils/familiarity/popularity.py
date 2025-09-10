@@ -32,7 +32,8 @@ class Popularity:
 
     def _init_requests(self, q_id):
         self._session = requests.Session()
-        self._user_agent = f'<{self.faker.company_email()}> {q_id} analyzer'
+        self._user_agent = f'HintEval/0.0.{q_id} (https://github.com/DataScienceUIBK/HintEval/; {self.faker.company_email()})'
+        self._headers = {"User-Agent": self._user_agent}
 
     def _find_similar_titles(self, title):
         params = {
@@ -42,7 +43,7 @@ class Popularity:
             "srsearch": title
         }
 
-        request = self._session.get(url='https://en.wikipedia.org/w/api.php', params=params)
+        request = self._session.get(url='https://en.wikipedia.org/w/api.php', params=params, headers=self._headers)
         request_json = request.json()
 
         if request_json['query']['search']:
