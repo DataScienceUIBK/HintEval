@@ -101,4 +101,4 @@ dataset.store_json('./evaluated_synthetic_hint_dataset.json')
 The evaluated scores and metrics are automatically stored in the dataset. Saving the dataset will also save the scores.
 :::
 
-That's it! If you have any feedback, questions, or suggestions, feel free to raise an issue in the [GitHub repository](https://github.com/my-unknown-account/HintEval/issues). We appreciate your input!
+That's it! If you have any feedback, questions, or suggestions, feel free to raise an issue in the [GitHub repository](https://github.com/DataScienceUIBK/HintEval/issues). We appreciate your input!

@@ -46,7 +46,7 @@ pip install hinteval
 For the latest features, you can install the most recent version from the main branch:
 
 ```bash
-pip install git+https://github.com/my-unknown-account/HintEval
+pip install git+https://github.com/DataScienceUIBK/HintEval
 ```
 
 ## 🏃 Quick Start

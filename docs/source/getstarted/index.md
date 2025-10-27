@@ -17,7 +17,7 @@ Before proceeding, ensure you have [HintEval installed](./install.md)!
 These tutorials provide a high-level overview of what you can achieve with HintEval and the essential skills needed to use it effectively. For a more detailed breakdown of HintEval's core concepts, visit the [Core Concepts](../concepts/index.md) page. You can also check out the [How-to Guides](../howtos/index.md) for specific use cases of HintEval.
 :::
 
-If you have any questions about HintEval, feel free to ask in our [GitHub repository](https://github.com/my-unknown-account/HintEval).
+If you have any questions about HintEval, feel free to ask in our [GitHub repository](https://github.com/DataScienceUIBK/HintEval).
 
 Let's dive in!
 
