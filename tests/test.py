@@ -8,7 +8,7 @@ from hinteval.evaluation.answer_leakage import Lexical, ContextualEmbeddings as 
 from hinteval.cores import Subset, Instance
 from hinteval.model import AnswerAware
 
-api_key = 'api_key'
+api_key = 'your_api_key'
 model_name_remote = 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
 model_name_local = 'meta-llama/Meta-Llama-3-8B-Instruct'
 
