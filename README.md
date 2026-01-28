@@ -4,7 +4,10 @@
 
 <p align="center">
   <a href="http://hinteval.readthedocs.io/"><img src="https://img.shields.io/static/v1?label=Documentation&message=HintEval&color=orange&logo=Read%20the%20Docs"></a>
-  <a href="https://doi.org/10.48550/arXiv.2502.00857"><img src="https://img.shields.io/static/v1?label=Paper&message=ArXiv&color=green&logo=arXiv"></a>
+  <!-- 
+    <a href="https://doi.org/10.48550/arXiv.2502.00857"><img src="https://img.shields.io/static/v1?label=Paper&message=ArXiv&color=green&logo=arXiv"></a>
+  -->
+  <a href="https://doi.org/10.48550/arXiv.2502.00857"><img src="https://img.shields.io/static/v1?label=Paper&message=ِDemonstration&color=green&logo=arXiv"></a>
   <a href="https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/tests/demo.ipynb"><img src="https://img.shields.io/static/v1?label=Colab&message=Notebook&logo=Google%20Colab&color=blue"></a>
   <a href="https://huggingface.co/JamshidJDMY/HintEval"><img src="https://img.shields.io/static/v1?label=Models&message=HuggingFace&color=yellow&logo=huggingface"></a>
 </p>
