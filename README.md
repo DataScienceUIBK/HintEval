@@ -67,7 +67,7 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 
 ### 🚀 Run the HintEval in Google Colab
 
-You can easily try **HintEval** in your browser via **Google Colab**, with no local installation required. Simply **[launch the Colab notebook](https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/tests/demo.ipynb)** to explore **HintEval** interactively.
+You can easily try **HintEval** in your browser via **Google Colab** or the **Online Demonstration**, with no local installation required. Simply **[📝 launch the Colab notebook]()** or **[🌐 visit the Demo](https://hints.ds-informatik.uibk.ac.at/)** to explore HintEval interactively.
 
 ### Generate a Synthetic Hint Dataset
 
@@ -257,7 +257,7 @@ Refer to our [📖 documentation](http://hinteval.readthedocs.io/) to learn more
 HintEval is modular and customizable, with core components designed to handle every stage of the hint generation and evaluation pipeline:
 
 ### 1. Dataset Management
- - **Preprocessed Datasets**: Includes widely used datasets like [TriviaHG](https://github.com/DataScienceUIBK/TriviaHG), [WikiHint](https://github.com/DataScienceUIBK/WikiHint), [HintQA](https://github.com/DataScienceUIBK/HintQA), and [KG-Hint](https://github.com/AlexWalcher/automaticHintGeneration).
+ - **Preprocessed Datasets**: Includes widely used datasets like [TriviaHG](https://github.com/DataScienceUIBK/TriviaHG), [WikiHint](https://github.com/DataScienceUIBK/WikiHint), [HintQA](https://github.com/DataScienceUIBK/HintQA), [KG-Hint](https://github.com/AlexWalcher/automaticHintGeneration), and [Jeopardy](https://github.com/jwolle1/jeopardy_clue_dataset).
  - **Dynamic Dataset Loading**: Use `Dataset.available_datasets()` to list, download, and load datasets effortlessly.
  - **Custom Dataset Creation**: Define datasets using the `Dataset` and `Instance` classes for tailored hint generation.
 
