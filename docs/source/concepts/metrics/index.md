@@ -74,7 +74,7 @@ Evaluating sentences or datasets using large language models (LLMs) can be compu
 
 To ensure that progress is not lost during evaluations, you can enable the **checkpoint** feature. This saves the current state at regular intervals, so in case of errors, you can resume from the last checkpoint rather than restarting the entire evaluation. You can control how frequently checkpoints are saved using the `checkpoint_step` parameter, which defines the number of steps between each save.
 
-For example, in the code below, we evaluate readability for sentences using the `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo` model with a batch size of 5. We enable the checkpoint feature and set it to save progress after every step, ensuring evaluations can resume from the last successful step:
+For example, in the code below, we evaluate readability for sentences using the `meta-llama/Llama-3.3-70B-Instruct-Turbo` model with a batch size of 5. We enable the checkpoint feature and set it to save progress after every step, ensuring evaluations can resume from the last successful step:
 
 :::{warning}
 To enable and use checkpointing, customize the directory where checkpoints are stored. For more information on customization, refer to [Customizations](../../howtos/customizations/environment_variables.md#checkpoint-storage).
@@ -86,7 +86,7 @@ from hinteval.evaluation.readability import LlmBased
 api_key = 'your_api_key'
 base_url = 'https://api.together.xyz/v1'
 
-llm = LlmBased(model_name='meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
+llm = LlmBased(model_name='meta-llama/Llama-3.3-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
                checkpoint=True, batch_size=5, checkpoint_step=1)
 ```
 
@@ -110,7 +110,7 @@ Here’s an example that combines checkpointing, memory release, and progress tr
 from hinteval.cores import Question, Hint
 from hinteval.evaluation.readability import LlmBased
 
-llm = LlmBased(model_name='meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo',
+llm = LlmBased(model_name='meta-llama/Llama-3.3-70B-Instruct-Turbo',
          api_key='your_api_key', checkpoint=True, checkpoint_step=1, enable_tqdm=True)
 sentence_1 = Question('What is the capital of Austria?')
 sentence_2 = Hint('This city, once home to Mozart and Beethoven, is the capital of Austria.')
@@ -118,7 +118,7 @@ sentences = [sentence_1, sentence_2]
 
 llm.evaluate(sentences)
 
-classes = [sent.metrics['readability-llm-meta-llama_Meta-Llama-3.1-70B-Instruct-Turbo'].metadata['description'] for sent in sentences]
+classes = [sent.metrics['readability-llm-meta-llama_Llama-3.3-70B-Instruct-Turbo'].metadata['description'] for sent in sentences]
 print(classes)
 
 llm.release_memory()
@@ -126,7 +126,7 @@ llm.release_memory()
 
 Example progress output:
 ```
-Evaluating readability metric using meta-llama_Meta-Llama-3.1-70B-Instruct-Turbo: 100%|██████████| 1/1 [00:17<00:00, 17.19s/it]
+Evaluating readability metric using meta-llama-Llama-3.3-70B-Instruct-Turbo: 100%|██████████| 1/1 [00:17<00:00, 17.19s/it]
 ['beginner', 'beginner']
 ```
 
@@ -150,4 +150,5 @@ With these features, you can efficiently manage the computational challenges of 
       lightbox.style.display = 'none';
     }
   }
+
 </script>
