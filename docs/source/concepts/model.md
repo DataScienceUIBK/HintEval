@@ -25,7 +25,7 @@ based on their preferred method.
 
 :::{note}
 We assume you have an active API key for the TogetherAI platform and are using this platform for hint generation. In
-this example, we use *meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo* as the model, which is available on the TogetherAI
+this example, we use *meta-llama/Llama-3.3-70B-Instruct-Turbo* as the model, which is available on the TogetherAI
 platform. If you wish to use another platform, ensure the model name is valid for that platform.
 
 For local execution, you can set `api_key` to `None`. HintEval supports running large language models (LLMs) locally
@@ -609,4 +609,5 @@ Generating hints using meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo: 100%|██
 ```
 
 With these features, you can effectively manage the computational demands of LLMs, ensuring progress is saved, memory usage is optimized, and generation progress is tracked in real-time.
+
 
