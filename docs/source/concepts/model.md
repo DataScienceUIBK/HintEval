@@ -544,7 +544,7 @@ Generating synthetic datasets using large language models (LLMs) can be computat
 
 To ensure that progress is not lost during hint generation, you can enable the **checkpoint** feature. This saves the current state at regular intervals, so in case of errors, you can resume from the last checkpoint instead of restarting the entire process. You can control how frequently checkpoints are saved using the `checkpoint_step` parameter, which defines the number of steps between each save.
 
-For example, in the following code, we generate 3 hints for each question using the `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo` model with a batch size of 5. We enable the checkpoint feature and set it to save progress every 10 steps, which corresponds to saving after generating 150 hints (3 hints per question * 5 questions per batch * 10 steps):
+For example, in the following code, we generate 3 hints for each question using the `meta-llama/Llama-3.3-70B-Instruct-Turbo` model with a batch size of 5. We enable the checkpoint feature and set it to save progress every 10 steps, which corresponds to saving after generating 150 hints (3 hints per question * 5 questions per batch * 10 steps):
 
 :::{warning}
 To enable and use checkpointing, customize the directory where checkpoints are stored. For more information on customization, refer to [Customizations](../howtos/customizations/environment_variables.md#checkpoint-storage).
@@ -556,7 +556,7 @@ from hinteval.model import AnswerAgnostic
 api_key = 'your_api_key'
 base_url = 'https://api.together.xyz/v1'
 
-answer_agnostic = AnswerAgnostic('meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
+answer_agnostic = AnswerAgnostic('meta-llama/Llama-3.3-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
                                  checkpoint=True, num_of_hints=3, batch_size=5, checkpoint_step=10)
 ```
 
@@ -595,7 +595,7 @@ instance_2 = Instance(question=question_2, answers=[], hints=[])
 subset.add_instance(instance_1, q_id='id_1')
 subset.add_instance(instance_2, q_id='id_2')
 
-answer_agnostic = AnswerAgnostic('meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
+answer_agnostic = AnswerAgnostic('meta-llama/Llama-3.3-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
                                  checkpoint=True, num_of_hints=3, checkpoint_step=1, enable_tqdm=True)
 
 answer_agnostic.generate([instance_1, instance_2])
@@ -605,9 +605,10 @@ answer_agnostic.release_memory()
 
 Example progress output:
 ```
-Generating hints using meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo: 100%|██████████| 2/2 [00:11<00:00,  5.88s/it]
+Generating hints using meta-llama/Llama-3.3-70B-Instruct-Turbo: 100%|██████████| 2/2 [00:11<00:00,  5.88s/it]
 ```
 
 With these features, you can effectively manage the computational demands of LLMs, ensuring progress is saved, memory usage is optimized, and generation progress is tracked in real-time.
+
 
 
