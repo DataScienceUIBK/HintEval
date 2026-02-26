@@ -113,13 +113,13 @@ dataset.prepare_dataset(fill_question_types=True)
 
 #### Hint Generation
 
-Generate 5 hints for each question using HintEval’s `AnswerAware` model. For this example, we will use the Meta LLaMA-3.1-70b-Instruct-Turbo model from TogetherAI.
+Generate 5 hints for each question using HintEval’s `AnswerAware` model. For this example, we will use the Meta LLaMA-3.3-70b-Instruct-Turbo model from TogetherAI.
 
 ```python
 from hinteval.model import AnswerAware
 
 generator = AnswerAware(
-    'meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', 
+    'meta-llama/Llama-3.3-70B-Instruct-Turbo', 
     api_key, base_url, num_of_hints=5, enable_tqdm=True
 )
 generator.generate(dataset['entire'].get_instances())
