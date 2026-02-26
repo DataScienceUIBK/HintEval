@@ -395,7 +395,7 @@ def my_parse_llm_response(llm_output: str) -> list[str]:
     return hints_output
 
 
-answer_aware = AnswerAware('meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
+answer_aware = AnswerAware('meta-llama/Llama-3.3-70B-Instruct-Turbo', api_key=api_key, base_url=base_url,
                            parse_llm_response=my_parse_llm_response, num_of_hints=4, temperature=0.3, max_tokens=1024,
                            batch_size=1, enable_tqdm=True)
 
@@ -609,6 +609,7 @@ Generating hints using meta-llama/Llama-3.3-70B-Instruct-Turbo: 100%|███�
 ```
 
 With these features, you can effectively manage the computational demands of LLMs, ensuring progress is saved, memory usage is optimized, and generation progress is tracked in real-time.
+
 
 
 
