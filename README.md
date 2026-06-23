@@ -67,7 +67,7 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 
 ### 🚀 Run the HintEval in Google Colab
 
-You can easily try **HintEval** in your browser via **Google Colab** or the **Online Demonstration**, with no local installation required. Simply **[📝 launch the Colab notebook]()** or **[🌐 visit the Demo](https://hints.ds-informatik.uibk.ac.at/)** to explore HintEval interactively.
+You can easily try **HintEval** in your browser via **Google Colab** or the **Online Demonstration**, with no local installation required. Simply **[📝 launch the Colab notebook](https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/demo/demo.ipynb)** or **[🌐 visit the Demo](https://hints.ds-informatik.uibk.ac.at/)** to explore HintEval interactively.
 
 ### Generate a Synthetic Hint Dataset
 
