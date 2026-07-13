@@ -333,7 +333,7 @@ Thank you for helping make this project better!
 
 
 ## 🪪License
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/apache-2-0) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) file for details.
 
 ## ✨Citation
 If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2502.00857):
