@@ -9,7 +9,7 @@
   <a href="https://huggingface.co/JamshidJDMY/HintEval"><img src="https://img.shields.io/static/v1?label=Models&message=HuggingFace&color=yellow&logo=huggingface"></a>
 </p>
 <p align="center">
-  <a href="https://opensource.org/license/apache-2-0"><img src="https://img.shields.io/static/v1?label=License&message=MIT&color=red"></a>
+  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/static/v1?label=License&message=MIT&color=red"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
   <a href="https://github.com/DataScienceUIBK/HintEval/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/DataScienceUIBK/HintEval.svg?label=Version&color=orange"></a>
 </p>
@@ -333,7 +333,7 @@ Thank you for helping make this project better!
 
 
 ## 🪪License
-This project is licensed under the Apache-2.0 License - see the [LICENSE](https://opensource.org/license/apache-2-0) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/apache-2-0) file for details.
 
 ## ✨Citation
 If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2502.00857):
