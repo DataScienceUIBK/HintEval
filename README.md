@@ -9,7 +9,7 @@
   <a href="https://huggingface.co/JamshidJDMY/HintEval"><img src="https://img.shields.io/static/v1?label=Models&message=HuggingFace&color=yellow&logo=huggingface"></a>
 </p>
 <p align="center">
-  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/static/v1?label=License&message=MIT&color=red"></a>
+  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/static/v1?label=License&message=Apache 2.0&color=red"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
   <a href="https://github.com/DataScienceUIBK/HintEval/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/DataScienceUIBK/HintEval.svg?label=Version&color=orange"></a>
 </p>
