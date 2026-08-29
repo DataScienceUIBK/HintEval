@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://hinteval.readthedocs.io/"><img src="https://img.shields.io/static/v1?label=Documentation&message=HintEval&color=orange&logo=Read%20the%20Docs"></a>
-  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/static/v1?label=License&message=MIT&color=green"></a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/static/v1?label=License&message=Apache%202.0&color=red"></a>
   <a href="https://pepy.tech/projects/hinteval"><img src="https://static.pepy.tech/badge/hinteval" alt="PyPI Downloads"></a>
 </p>
 
@@ -9,15 +9,16 @@
 ## ✨ Features
  - **Unified Framework**: HintEval combines datasets, models, and evaluation metrics into a single Python-based library. This integration allows researchers to seamlessly conduct hint generation and evaluation tasks.
  - **Comprehensive Metrics**: Implements *five* core metrics (*fifteen* evaluation methods)—*Relevance*, *Readability*, *Convergence*, *Familiarity*, and *Answer Leakage*—with lightweight to resource-intensive methods to cater to diverse research needs.
- - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including *TriviaHG*, *WikiHint*, *HintQA*, and *KG-Hint*, supporting both *answer-aware* and *answer-agnostic* hint generation approaches.
+ - **Dataset Support**: Provides access to multiple preprocessed and evaluated datasets, including [*TriviaHG*](https://github.com/DataScienceUIBK/TriviaHG), [*WikiHint*](https://github.com/DataScienceUIBK/WikiHint), [*HintQA*](https://github.com/DataScienceUIBK/HintQA), [*KG-Hint*](https://github.com/AlexWalcher/automaticHintGeneration), and [*Jeopardy*](https://github.com/jwolle1/jeopardy_clue_dataset) , supporting both *answer-aware* and *answer-agnostic* hint generation approaches.
  - **Customizability**: Allows users to define their own datasets, models, and evaluation methods with minimal effort using a structured design based on Python classes.
- - **Extensive Documentation**: Accompanied by detailed [📖online documentation](https://hinteval.readthedocs.io/) and tutorials for easy adoption.
+ - **Extensive Documentation**: Accompanied by detailed [📖 online documentation](https://hinteval.readthedocs.io/) and tutorials for easy adoption.
 
 ## 🔎 Roadmap
  - **Enhanced Datasets**: Expand the repository with additional datasets to support diverse hint-related tasks.
  - **Advanced Evaluation Metrics**: Introduce new evaluation techniques such as Unieval and cross-lingual compatibility.
  - **Broader Compatibility**: Ensure support for emerging language models and APIs.
  - **Community Involvement**: Encourage contributions of new datasets, metrics, and use cases from the research community.
+ - 
 ## 🖥️ Installation
 
 It's recommended to install HintEval in a [virtual environment](https://docs.python.org/3/library/venv.html) using [Python 3.11.9](https://www.python.org/downloads/release/python-3119/). If you're not familiar with Python virtual environments, check out this [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). Alternatively, you can create a new environment using [Conda](https://anaconda.org/anaconda/conda).
@@ -50,6 +51,10 @@ pip install git+https://github.com/DataScienceUIBK/HintEval
 ```
 
 ## 🏃 Quick Start
+
+### 🚀 Run the HintEval in Google Colab
+
+You can easily try **HintEval** in your browser via **Google Colab** or the **Online Demonstration**, with no local installation required. Simply **[📝 launch the Colab notebook](https://colab.research.google.com/github/DataScienceUIBK/HintEval/blob/main/tests/demo.ipynb)** or **[🌐 visit the Demo](https://hints.ds-informatik.uibk.ac.at/)** to explore HintEval interactively.
 
 ### Generate a Synthetic Hint Dataset
 
@@ -206,6 +211,23 @@ Wikipedia(enable_tqdm=True).evaluate(questions + hints + answers)
 ContextualEmbeddings(enable_tqdm=True).evaluate(instances)
 ```
 
+#### Viewing the Evaluation Metrics
+
+Finally, let's view the metrics evaluated for the second hint of the third question in the dataset.
+
+```python
+third_question = dataset['entire'].get_instance('id_3')
+second_hint = third_question.hints[1]
+
+print(f'Question: {third_question.question.question}')
+print(f'Answer: {third_question.answers[0].answer}')
+print(f'Second Hint: {second_hint.hint}')
+print()
+
+for metric in second_hint.metrics:
+    print(f'{metric}: {second_hint.metrics[metric].value}')
+```
+
 #### Exporting the Results
 
 Export the evaluated dataset to a JSON file for further analysis:
@@ -216,7 +238,7 @@ dataset.store_json('./evaluated_synthetic_hint_dataset.json')
 
 > **Note**: Evaluated scores and metrics are automatically stored in the dataset. Saving the dataset includes the scores.
 
-Refer to our [📖documentation](http://hinteval.readthedocs.io/) to learn more.
+Refer to our [📖 documentation](http://hinteval.readthedocs.io/) to learn more.
 
 ## ⚙️ Components
 HintEval is modular and customizable, with core components designed to handle every stage of the hint generation and evaluation pipeline:
@@ -290,4 +312,4 @@ Thank you for helping make this project better!
 
 
 ## 🪪License
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) file for details.
+This project is licensed under the Apache 2.0 License - see the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0) file for details.
