@@ -276,7 +276,7 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
 
 <p align="center">
-<img src="./docs/source/_static/imgs/evaluators.png" width="50%">
+  <img src="./docs/source/_static/imgs/dataset-diagram.png" style="width: 50%;">
 </p>
 
 ### 4. Model Integration
