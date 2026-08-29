@@ -9,18 +9,20 @@ def _to_df(matrix_lol):
 
 def draw_chart(all_data, output_path="correlation_heatmaps_row.pdf"):
     panels = [
-        ("triviahg", "Spearmans"),
-        ("triviahg", "Kendalltau"),
-        ("wikihint", "Spearmans"),
-        ("wikihint", "Kendalltau"),
+        ("triviahg", "Spearmans", "TriviaHG", "Spearman’s ρ"),
+        ("triviahg", "Kendalltau", "TriviaHG", "Kendall’s τ"),
+        ("wikihint", "Spearmans", "WikiHint", "Spearman’s ρ"),
+        ("wikihint", "Kendalltau", "WikiHint", "Kendall’s τ"),
     ]
 
-    dfs = [_to_df(all_data[d][m]) for d, m in panels]
+    dfs = [_to_df(all_data[d][m]) for d, m, _, _ in panels]
 
     fig, axes = plt.subplots(1, 4, figsize=(24, 6))
     cbar_ax = fig.add_axes([0.93, 0.15, 0.015, 0.7])
 
-    for i, (ax, df, (dataset, metric)) in enumerate(zip(axes, dfs, panels)):
+    for i, (ax, df, (_, _, dataset_label, metric_label)) in enumerate(
+        zip(axes, dfs, panels)
+    ):
         show_cbar = (i == 3)
 
         sns.heatmap(
@@ -39,26 +41,37 @@ def draw_chart(all_data, output_path="correlation_heatmaps_row.pdf"):
             cbar_ax=cbar_ax if show_cbar else None
         )
 
-        # ✅ Required title format
-        ax.set_title(f"{metric} ({dataset.capitalize()})", fontsize=14, pad=12)
+        ax.set_title(
+            f"{metric_label} ({dataset_label})",
+            fontsize=14,
+            pad=12
+        )
 
         ax.set_xlabel("")
         ax.set_ylabel("")
-        ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right", fontsize=13)
-        ax.set_yticklabels(ax.get_yticklabels(), rotation=0, fontsize=13)
+        ax.set_xticklabels(
+            ax.get_xticklabels(),
+            rotation=45,
+            ha="right",
+            fontsize=13
+        )
+        ax.set_yticklabels(
+            ax.get_yticklabels(),
+            rotation=0,
+            fontsize=13
+        )
 
     # Colorbar styling
     cbar = axes[-1].collections[0].colorbar
     cbar.ax.tick_params(labelsize=12)
     cbar.set_label("Correlation coefficient", fontsize=13)
 
-    # ✅ Extra spacing between charts
     plt.subplots_adjust(
         left=0.04,
         right=0.90,
         bottom=0.30,
         top=0.88,
-        wspace=0.55   # 🔑 this prevents label overlap
+        wspace=0.55
     )
 
     plt.savefig(output_path, format="pdf", bbox_inches="tight")
