@@ -268,12 +268,17 @@ HintEval is modular and customizable, with core components designed to handle ev
 ### 2. Hint Generation Models
  - **Answer-Aware Models**: Generate hints tailored to specific answers using LLMs.
  - **Answer-Agnostic Models**: Generate hints without requiring specific answers for open-ended tasks.
+   
 ### 3. Evaluation Metrics
  - **Relevance**: Measures how relevant the hints are to the question.
  - **Readability**: Assesses the readability of the hints.
  - **Convergence**: Evaluates how effectively hints narrow down potential answers.
  - **Familiarity**: Rates how common or well-known the hints' information is.
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
+   
+<p align="center">
+  <img src="./docs/source/_static/imgs/evaluators.png" style="width: 50%;">
+</p>
 
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
