@@ -262,7 +262,7 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Custom Dataset Creation**: Define datasets using the `Dataset` and `Instance` classes for tailored hint generation.
 
 <p align="center">
-<img src="./docs/source/_static/imgs/dataset-diagram.png">
+  <img src="./docs/source/_static/imgs/dataset-diagram.png" style="width: 50%;">
 </p>
 
 ### 2. Hint Generation Models
@@ -274,10 +274,6 @@ HintEval is modular and customizable, with core components designed to handle ev
  - **Convergence**: Evaluates how effectively hints narrow down potential answers.
  - **Familiarity**: Rates how common or well-known the hints' information is.
  - **Answer Leakage**: Detects how much the hints reveal the correct answers.
-
-<p align="center">
-  <img src="./docs/source/_static/imgs/dataset-diagram.png" style="width: 50%;">
-</p>
 
 ### 4. Model Integration
  - Integrates seamlessly with API-based platforms (e.g., TogetherAI).
