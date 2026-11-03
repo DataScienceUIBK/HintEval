@@ -337,21 +337,30 @@ Thank you for helping make this project better!
 This project is licensed under the Apache 2.0 License - see the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0) file for details.
 
 ## ✨Citation
-If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2502.00857):
+If you find this work useful, please cite [📜our paper](https://doi.org/10.18653/2026.emnlp-demos.2):
 ### Plain
 
-Mozafari, J., Piryani, B., Abdallah, A., & Jatowt, A. (2025). HintEval: A Comprehensive Framework for Hint Generation and Evaluation for Questions. arXiv preprint arXiv:2502.00857.
+Jamshid Mozafari, Bhawna Piryani, Abdelrahman Abdallah, and Adam Jatowt. 2026. HintEval: An Open-Source Python Toolkit for Hint Generation and Hint Evaluation. In Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: System Demonstrations, pages 13–23, Budapest, Hungary. Association for Computational Linguistics.
 
 ### Bibtex
 ```bibtex
-@ARTICLE{mozafari2025hintevalcomprehensiveframeworkhint,
-       author = {{Mozafari}, Jamshid and {Piryani}, Bhawna and {Abdallah}, Abdelrahman and {Jatowt}, Adam},
-        title = "{HintEval: A Comprehensive Framework for Hint Generation and Evaluation for Questions}",
-      journal = {arXiv e-prints},
-     keywords = {Computer Science - Computation and Language, Computer Science - Information Retrieval},
-         year = 2025,
-        month = feb,
-          doi = {10.48550/arXiv.2502.00857}
+@inproceedings{mozafari-etal-2026-hinteval,
+    title = "{H}int{E}val: An Open-Source Python Toolkit for Hint Generation and Hint Evaluation",
+    author = "Mozafari, Jamshid  and
+      Piryani, Bhawna  and
+      Abdallah, Abdelrahman  and
+      Jatowt, Adam",
+    editor = "Agrawal, Sweta  and
+      Abad, Alberto",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-demos.2/",
+    doi = "10.18653/2026.emnlp-demos.2",
+    pages = "13--23",
+    ISBN = "979-8-89176-461-3"
 }
 ```
 
